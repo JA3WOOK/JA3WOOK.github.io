@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out --dotfiles"
+    "deploy": "powershell -Command \"New-Item -ItemType File -Path ./out/.nojekyll -Force\" && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
